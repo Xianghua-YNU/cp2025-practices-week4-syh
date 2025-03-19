@@ -50,18 +50,14 @@ def plot_bifurcation(r_min, r_max, n_r, n_iterations, n_discard):
     
     return fig
 
-# 主程序执行
 if __name__ == "__main__":
-    # 配置中文字体
     plt.rcParams['font.sans-serif'] = ['SimHei']
     plt.rcParams['axes.unicode_minus'] = False
-    
-    # 任务1：时间序列图
+
     r_values = [2, 3.2, 3.45, 3.6]
     fig1 = plot_time_series(r_values, 0.5, 60)
     fig1.canvas.manager.set_window_title('figure1')
     
-    # 任务2：分岔图
     fig2 = plot_bifurcation(2.6, 4, 1400, 250, 100)
     fig2.canvas.manager.set_window_title('figure2')
     
